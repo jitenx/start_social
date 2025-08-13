@@ -21,7 +21,7 @@ async def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     user = db.query(models.User).filter(
         models.User.email == new_user.email).first()
     if user:
-        raise HTTPException(status_code=status.HTTP_406_NOT_ACCEPTABLE,
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
                             detail=f"User with email: {new_user.email} already exists")
     db.add(new_user)
     db.commit()
