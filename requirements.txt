@@ -8,3 +8,5 @@ python-jose[cryptography]
 pydantic-settings
 alembic
 pytest
+pydantic_extra_types
+phonenumbers

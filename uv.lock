@@ -506,6 +506,15 @@ bcrypt = [
 ]
 
 [[package]]
+name = "phonenumbers"
+version = "9.0.11"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7b/54/367d3b262bb1505af1c2b164e6e31c87522e17c68095faa56e01f4dbbd57/phonenumbers-9.0.11.tar.gz", hash = "sha256:6573858dcf0a7a2753a071375e154d9fc11791546c699b575af95d2ba7d84a1d", size = 2297786, upload-time = "2025-08-07T15:42:47.807Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/90/1a/cc7f1a81045cb4c1f5801082adf29c34b67c7193f0d29ae56ce68546137c/phonenumbers-9.0.11-py2.py3-none-any.whl", hash = "sha256:a8ebb2136f1f14dfdbadb98be01cb71b96f880dea011eb5e0921967fe3a23abf", size = 2583590, upload-time = "2025-08-07T15:42:44.048Z" },
+]
+
+[[package]]
 name = "pluggy"
 version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -623,6 +632,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/a4/7d/e09391c2eebeab681df2b74bfe6c43422fffede8dc74187b2b0bf6fd7571/pydantic_core-2.33.2-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:61c18fba8e5e9db3ab908620af374db0ac1baa69f0f32df4f61ae23f15e586ac", size = 1806162, upload-time = "2025-04-23T18:32:20.188Z" },
     { url = "https://files.pythonhosted.org/packages/f1/3d/847b6b1fed9f8ed3bb95a9ad04fbd0b212e832d4f0f50ff4d9ee5a9f15cf/pydantic_core-2.33.2-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:95237e53bb015f67b63c91af7518a62a8660376a6a0db19b89acc77a4d6199f5", size = 1981560, upload-time = "2025-04-23T18:32:22.354Z" },
     { url = "https://files.pythonhosted.org/packages/6f/9a/e73262f6c6656262b5fdd723ad90f518f579b7bc8622e43a942eec53c938/pydantic_core-2.33.2-cp313-cp313t-win_amd64.whl", hash = "sha256:c2fc0a768ef76c15ab9238afa6da7f69895bb5d1ee83aeea2e3509af4472d0b9", size = 1935777, upload-time = "2025-04-23T18:32:25.088Z" },
+]
+
+[[package]]
+name = "pydantic-extra-types"
+version = "2.10.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7e/ba/4178111ec4116c54e1dc7ecd2a1ff8f54256cdbd250e576882911e8f710a/pydantic_extra_types-2.10.5.tar.gz", hash = "sha256:1dcfa2c0cf741a422f088e0dbb4690e7bfadaaf050da3d6f80d6c3cf58a2bad8", size = 138429, upload-time = "2025-06-02T09:31:52.713Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/70/1a/5f4fd9e7285f10c44095a4f9fe17d0f358d1702a7c74a9278c794e8a7537/pydantic_extra_types-2.10.5-py3-none-any.whl", hash = "sha256:b60c4e23d573a69a4f1a16dd92888ecc0ef34fb0e655b4f305530377fa70e7a8", size = 38315, upload-time = "2025-06-02T09:31:51.229Z" },
 ]
 
 [[package]]
@@ -916,7 +938,9 @@ dependencies = [
     { name = "emailvalidator" },
     { name = "fastapi", extra = ["standard"] },
     { name = "passlib", extra = ["bcrypt"] },
+    { name = "phonenumbers" },
     { name = "psycopg2-binary" },
+    { name = "pydantic-extra-types" },
     { name = "pydantic-settings" },
     { name = "pytest" },
     { name = "python-jose", extra = ["cryptography"] },
@@ -930,7 +954,9 @@ requires-dist = [
     { name = "emailvalidator", specifier = ">=0.3" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.116.1" },
     { name = "passlib", extras = ["bcrypt"], specifier = ">=1.7.4" },
+    { name = "phonenumbers", specifier = ">=9.0.11" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },
+    { name = "pydantic-extra-types", specifier = ">=2.10.5" },
     { name = "pydantic-settings", specifier = ">=2.10.1" },
     { name = "pytest", specifier = ">=8.4.1" },
     { name = "python-jose", extras = ["cryptography"], specifier = ">=3.5.0" },

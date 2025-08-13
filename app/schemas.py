@@ -1,11 +1,12 @@
 from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel, EmailStr
+from pydantic_extra_types.phone_numbers import PhoneNumber
 
 
 class UserCreate(BaseModel):
     email: EmailStr
-    phone_number: str
+    phone_number: PhoneNumber
     password: str
     address: str
 
