@@ -4,9 +4,9 @@ from app import schemas
 
 def test_get_all_posts(authorized_client, test_posts):
     res = authorized_client.get("/posts/")
-
+    print(res)
     def validate(post):
-        return schemas.Post(**post)
+        return schemas.PostVoted(**post)
 
     posts_map = map(validate, res.json())
     list(posts_map)
